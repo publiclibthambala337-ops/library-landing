@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thambala Public Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      animation: fadeUp 2.2s ease forwards;
+    }
+
+    .btns {
+      margin-top: 30px;
+      animation: fadeUp 3s ease forwards;
+    }
+
+    a.btn {
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    a.btn:hover {
+      background: #fff;
+      color: #203a43;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      animation: float 10s infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      top: 10%;
+      left: 10%;
+    }
+
+    .circle:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      bottom: 10%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <section class="hero">
+    <h1>Thambala Public Library</h1>
+    <p>
+      A community knowledge center dedicated to reading, learning,
+      and lifelong education.
+    </p>
+
+    <div class="btns">
+      <a class="btn" href="https://sites.google.com/view/thambalapubliclibrary/home">
+        Enter Library Website
+      </a>
+      <a class="btn" href="https://sites.google.com/view/thambalapubliclibrary/contact">
+        Contact Us
+      </a>
+    </div>
+  </section>
+</body>
+</html>
