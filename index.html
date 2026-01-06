@@ -1,123 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thambala Public Library</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Thambala Public Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta name="description" content="Thambala Public Library – A modern community library for knowledge, learning and culture.">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      overflow-x: hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      padding: 20px;
-    }
+<style>
+:root{
+  --dark:#0b1d26;
+  --mid:#123d4f;
+  --light:#1fa2a6;
+}
 
-    h1 {
-      font-size: 3rem;
-      animation: fadeUp 1.5s ease forwards;
-    }
+*{box-sizing:border-box;}
 
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      animation: fadeUp 2.2s ease forwards;
-    }
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,var(--dark),var(--mid),var(--light));
+  color:#fff;
+  overflow-x:hidden;
+}
 
-    .btns {
-      margin-top: 30px;
-      animation: fadeUp 3s ease forwards;
-    }
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  position:relative;
+}
 
-    a.btn {
-      text-decoration: none;
-      color: #fff;
-      border: 2px solid #fff;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
+.hero-content{
+  max-width:850px;
+  animation:fadeUp 1.5s ease forwards;
+}
 
-    a.btn:hover {
-      background: #fff;
-      color: #203a43;
-    }
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,5vw,4rem);
+  margin-bottom:20px;
+}
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.hero p{
+  font-size:clamp(1rem,2.5vw,1.25rem);
+  line-height:1.8;
+  opacity:0.95;
+}
 
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      animation: float 10s infinite;
-    }
+.buttons{
+  margin-top:35px;
+}
 
-    .circle:nth-child(1) {
-      width: 200px;
-      height: 200px;
-      top: 10%;
-      left: 10%;
-    }
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:14px 30px;
+  border-radius:40px;
+  border:2px solid #fff;
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+}
 
-    .circle:nth-child(2) {
-      width: 300px;
-      height: 300px;
-      bottom: 10%;
-      right: 10%;
-      animation-delay: 3s;
-    }
+.btn:hover{
+  background:#fff;
+  color:#123d4f;
+}
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-40px); }
-      100% { transform: translateY(0); }
-    }
-  </style>
+.shape{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  animation:float 12s infinite ease-in-out;
+}
+
+.shape.one{
+  width:260px;height:260px;
+  top:10%;left:5%;
+}
+
+.shape.two{
+  width:350px;height:350px;
+  bottom:5%;right:5%;
+  animation-delay:3s;
+}
+
+.shape.three{
+  width:180px;height:180px;
+  top:60%;left:20%;
+  animation-delay:6s;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-50px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* MOBILE OPTIMIZATION */
+@media(max-width:600px){
+  .shape{display:none;}
+}
+</style>
 </head>
 
 <body>
-  <div class="circle"></div>
-  <div class="circle"></div>
 
-  <section class="hero">
+<div class="shape one"></div>
+<div class="shape two"></div>
+<div class="shape three"></div>
+
+<section class="hero">
+  <div class="hero-content">
     <h1>Thambala Public Library</h1>
     <p>
-      A community knowledge center dedicated to reading, learning,
-      and lifelong education.
+      A modern community library dedicated to knowledge,
+      reading culture, lifelong learning, and intellectual growth.
     </p>
 
-    <div class="btns">
+    <div class="buttons">
       <a class="btn" href="https://sites.google.com/view/thambalapubliclibrary/home">
-        Enter Library Website
+        Enter Library
       </a>
       <a class="btn" href="https://sites.google.com/view/thambalapubliclibrary/contact">
-        Contact Us
+        Contact
       </a>
     </div>
-  </section>
+  </div>
+</section>
+
 </body>
 </html>
